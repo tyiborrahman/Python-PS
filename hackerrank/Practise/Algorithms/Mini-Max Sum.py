@@ -1,11 +1,11 @@
-n = list(map(int,input().split()))
-min = 0
-max = 0
-n.sort()
-for i in range(len(n)):
-    if n[i] >= n[1]:
-        max += n[i]
-    if i < (len(n)-1):
-        min += n[i]
+ar = list(map(int,input().split()))
+l = len(ar)
+p = 0
+q = 0
 
-print(min,max)
+for i in range(len(ar)):
+    p = p + ar[i]
+    q = q + ar[i]
+p = p - ar[l-1]
+q = q - ar[0]
+print(p,q)
